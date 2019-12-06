@@ -15,16 +15,16 @@
             <p> <%= listing.description %> </p>
             <p> <%= number_to_currency(listing.price) %> </p>
             <p> <%= listing.user.name %> </p>
-            <div class="action">
-              <% if (user_signed_in?) && (current_user === listing.user) %>
+            <% if (user_signed_in?) && (current_user === listing.user) %>
+              <div class="action">
                 <%= link_to 'Edit Item', edit_listing_path(listing), class: "btn btn-secondary" %>
                 <%= button_to "Delete Item", listing, data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-    
+

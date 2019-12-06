@@ -4,17 +4,34 @@
     <title>Etsydemo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
 		<%= render 'layouts/nav' %>
+    <% flash.each do |name, msg| %>
+      <% if msg.is_a?(String) %>
+        <div
+          class="alert alert-<%= name == 'notice' ? 'success' : 'danger' %> alert-dismissable"
+          role="alert"
+        >
+          <button 
+            type="button" 
+            class="close" 
+            data-dismiss="alert" 
+            aria-hidden="true"
+          >
+            &times;
+          </button>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        </div>
+      <% end %>
+     <% end %>
+
 		<div class="container">
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

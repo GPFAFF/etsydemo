@@ -1,12 +1,10 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-6 p-4">
 		<div class="thumbnail">
 			<%= image_tag url_for(@listing.image) %>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<div class="col-md-6 flex-middle">
 		<h2>
       <strong>Name:</strong>
       <%= @listing.name %>
@@ -24,6 +22,9 @@
 	</div>
 </div>
 
+<% if current_user == @listing.user %>
+	<%= link_to 'Edit', edit_listing_path(@listing), class: "badge badge-dark"  %> |
+<% end %>
 
-<%= link_to 'Edit', edit_listing_path(@listing), class: "badge badge-dark"  %> |
 <%= link_to 'Back', listings_path, class: "badge badge-dark" %>
+

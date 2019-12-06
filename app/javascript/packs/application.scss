@@ -6,6 +6,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.thumbnail > img, .thumbnail > a > img {
+  max-width: 100%;
+}
+
+form {
+  padding: 40px 0;
+}
+
+footer {
+  padding: 40px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+
+  > a {
+    margin-right: 5px;
+  }
+}
+
+.flex-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2, h3 {
+  padding: 30px 0 0;
+}
+
 .navbar {
   background-color: #e8e8e8;
 
