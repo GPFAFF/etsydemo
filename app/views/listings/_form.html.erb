@@ -1,13 +1,8 @@
 <%= form_with(model: listing, local: true) do |form| %>
   <% if listing.errors.any? %>
-    <div class="alert alert-danger alert-dismissable">
-      <button 
-        type="button" 
-        class="close" 
-        data-dismiss="alert" 
-        aria-hidden="true"
-      >
-        &times;
+     <div class="alert alert-danger alert-dismissible fade show" role="alert">  
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
       </button>
       <h2><%= pluralize(listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
 

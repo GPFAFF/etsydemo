@@ -19,11 +19,20 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'figaro', '~> 1.1.1'
+gem 'stripe', '~> 5.11.0'
+gem 'stripe-rails', '~> 1.9.1'
+
+gem 'pry', '~> 0.12.2'
+
+gem 'bootstrap'
 
 gem 'jquery'
 gem 'jquery-rails'
 
 gem 'devise'
+
+
 
 gem 'rubocop', require: false
 

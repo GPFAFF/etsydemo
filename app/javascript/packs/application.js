@@ -9,9 +9,4 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("jquery-ujs")
-require("bootstrap/dist/js/bootstrap")
-
-document.addEventListener('click', (event) => {
-  const close = event.target;
-  console.log(close);
-})
+require('./bootstrap_custom.js')

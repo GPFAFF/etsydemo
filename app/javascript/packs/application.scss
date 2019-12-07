@@ -6,7 +6,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.thumbnail > img, .thumbnail > a > img {
+img, .thumbnail > img, .thumbnail > a > img {
   max-width: 100%;
 }
 
@@ -16,6 +16,10 @@ form {
 
 footer {
   padding: 40px;
+}
+
+.spacer {
+  padding: 0 10px;
 }
 
 .action {
